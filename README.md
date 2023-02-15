@@ -1,6 +1,10 @@
 # Diary Writer
 This is a simple diary writing application built with Python and the tkinter library. The user can write diary entries in a specific format and save them to a text file.
 
+## Modules Used
+
+- `Tkinter` (version 8.5.0) - [Documentation](https://docs.python.org/3/library/tkinter.html)
+- `Time` (version 0.3.0) - [Documentation](https://docs.python.org/3/library/time.html)
 # Features
   - User-friendly interface with a label displaying the current date
   + Entry field with a default message that can be edited by the user
@@ -21,7 +25,4 @@ This is a simple diary writing application built with Python and the tkinter lib
   - Add an option to view previous diary entries
   - Improve the confirmation prompt to include the file name of the previous entry
   - Allow the user to customize the diary format and file name
-## Modules Used
 
-- `Tkinter` (version 8.5.0) - [Documentation](https://docs.python.org/3/library/tkinter.html)
-- `Time` (version 0.3.0) - [Documentation](https://docs.python.org/3/library/time.html)
