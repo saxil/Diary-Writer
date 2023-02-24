@@ -1,0 +1,25 @@
+from tkinter import *
+from datetime import date
+from tkinter import messagebox
+diary=Tk()
+diary.title("Diary Writer")
+diary.geometry("250x100")
+diary.iconbitmap('diary.ico')
+v= StringVar()
+diary_text= v.get()
+diary_date = date.today()
+diary_label=Label(diary,text="write :", fg='red')
+diary_label.grid(row=0,column=0)
+diary_entry=Entry(diary,width =20 , font = ("Bahnschrift",10), textvariable=v, relief = FLAT, cursor= "xterm")
+diary_entry.grid(row=0,column=1)
+def diary_save():
+    diary_text= v.get()
+    diary=open(f"Diary dated {diary_date}.txt","w+") 
+    diary.write("Dear Diary,\n")
+    diary.write(diary_text)
+    diary.write("\n Good Night.\n Diary!!")
+    diary.close()
+    messagebox.showinfo("Diary Entry",f"Diary was wrote on {diary_date}")
+
+diary_save_button=Button(diary,text="Save",font=("bahnscrift",10),fg="green",command=diary_save,relief=FLAT,cursor="hand2")
+diary_save_button.grid(row=0,column=2)
